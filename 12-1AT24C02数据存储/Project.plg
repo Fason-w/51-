@@ -1,0 +1,207 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\AllLab\keil_project\12-1AT24C02Êý¾Ý´æ´¢\Project.uvproj
+Project File Date:  09/20/2026
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling 12C.c...
+12C.C(3): error C141: syntax error near '12', expected '<id>'
+12C.C(4): error C141: syntax error near '12', expected '<id>'
+12C.C(11): error C141: syntax error near '12'
+12C.C(13): error C141: syntax error near 'C_SDA'
+12C.C(13): error C202: 'C_SDA': undefined identifier
+12C.C(14): error C141: syntax error near 'C_SCL'
+12C.C(14): error C202: 'C_SCL': undefined identifier
+12C.C(15): error C141: syntax error near 'C_SDA'
+12C.C(15): error C202: 'C_SDA': undefined identifier
+12C.C(16): error C141: syntax error near 'C_SCL'
+12C.C(16): error C202: 'C_SCL': undefined identifier
+12C.C(24): error C141: syntax error near '12'
+12C.C(26): error C141: syntax error near 'C_SDA'
+12C.C(26): error C202: 'C_SDA': undefined identifier
+12C.C(27): error C141: syntax error near 'C_SCL'
+12C.C(27): error C202: 'C_SCL': undefined identifier
+12C.C(28): error C141: syntax error near 'C_SDA'
+12C.C(28): error C202: 'C_SDA': undefined identifier
+12C.C(36): error C141: syntax error near '12'
+12C.C(41): error C141: syntax error near 'C_SDA'
+12C.C(41): error C202: 'C_SDA': undefined identifier
+12C.C(42): error C141: syntax error near 'C_SCL'
+12C.C(42): error C202: 'C_SCL': undefined identifier
+12C.C(43): error C141: syntax error near 'C_SCL'
+12C.C(43): error C202: 'C_SCL': undefined identifier
+12C.C(52): error C141: syntax error near '12'
+12C.C(55): error C141: syntax error near 'C_SDA'
+12C.C(55): error C202: 'C_SDA': undefined identifier
+12C.C(59): error C141: syntax error near 'C_SCL'
+12C.C(59): error C202: 'C_SCL': undefined identifier
+12C.C(60): error C141: syntax error near 'C_SDA'
+12C.C(60): error C202: 'C_SDA': undefined identifier
+12C.C(61): error C141: syntax error near 'C_SCL'
+12C.C(61): error C202: 'C_SCL': undefined identifier
+12C.C(71): error C141: syntax error near '12'
+12C.C(73): error C141: syntax error near 'C_SDA'
+12C.C(73): error C202: 'C_SDA': undefined identifier
+12C.C(74): error C141: syntax error near 'C_SCL'
+12C.C(74): error C202: 'C_SCL': undefined identifier
+12C.C(75): error C141: syntax error near 'C_SCL'
+12C.C(75): error C202: 'C_SCL': undefined identifier
+12C.C(84): error C141: syntax error near '12'
+12C.C(87): error C141: syntax error near 'C_SDA'
+12C.C(87): error C202: 'C_SDA': undefined identifier
+12C.C(88): error C141: syntax error near 'C_SCL'
+12C.C(88): error C202: 'C_SCL': undefined identifier
+12C.C(89): error C141: syntax error near 'C_SDA'
+12C.C(89): error C202: 'C_SDA': undefined identifier
+12C.C(91): error C141: syntax error near 'C_SCL'
+12C.C(91): error C202: 'C_SCL': undefined identifier
+compiling AT24C02.c...
+12C.H(4): error C141: syntax error near '12'
+12C.H(5): error C141: syntax error near '12'
+12C.H(6): error C141: syntax error near '12'
+12C.H(7): error C141: syntax error near '12'
+12C.H(8): error C141: syntax error near '12'
+12C.H(9): error C141: syntax error near '12'
+Target not created
+Build target 'Target 1'
+compiling 12C.c...
+12C.C(3): error C202: 'I': undefined identifier
+12C.C(13): error C202: 'I': undefined identifier
+12C.C(14): error C202: 'I2C_SCL': undefined identifier
+12C.C(16): error C202: 'I2C_SCL': undefined identifier
+12C.C(27): error C202: 'I2C_SCL': undefined identifier
+12C.C(28): error C202: 'I': undefined identifier
+12C.C(42): error C202: 'I2C_SCL': undefined identifier
+12C.C(43): error C202: 'I2C_SCL': undefined identifier
+12C.C(55): error C202: 'I': undefined identifier
+12C.C(59): error C202: 'I2C_SCL': undefined identifier
+12C.C(61): error C202: 'I2C_SCL': undefined identifier
+12C.C(74): error C202: 'I2C_SCL': undefined identifier
+12C.C(75): error C202: 'I2C_SCL': undefined identifier
+12C.C(87): error C202: 'I': undefined identifier
+12C.C(88): error C202: 'I2C_SCL': undefined identifier
+12C.C(91): error C202: 'I2C_SCL': undefined identifier
+compiling AT24C02.c...
+Target not created
+Build target 'Target 1'
+compiling 12C.c...
+linking...
+Program Size: data=39.0 xdata=0 code=807
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(9): error C141: syntax error near 'void'
+compiling AT24C02.c...
+AT24C02.c(2): warning C318: can't open file 'I2C.h'
+AT24C02.C(9): warning C206: 'I2C_Start': missing function-prototype
+AT24C02.C(10): warning C206: 'I2C_SendByte': missing function-prototype
+AT24C02.C(10): error C267: 'I2C_SendByte': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling AT24C02.c...
+AT24C02.c(2): warning C318: can't open file 'I2C.h'
+AT24C02.C(9): warning C206: 'I2C_Start': missing function-prototype
+AT24C02.C(10): warning C206: 'I2C_SendByte': missing function-prototype
+AT24C02.C(10): error C267: 'I2C_SendByte': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling AT24C02.c...
+AT24C02.C(6): warning C280: 'WordAddress': unreferenced local variable
+AT24C02.C(15): warning C280: 'WordAddress': unreferenced local variable
+linking...
+Program Size: data=41.0 xdata=0 code=842
+creating hex file from "Project"...
+"Project" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling AT24C02.c...
+AT24C02.C(6): warning C280: 'WordAddress': unreferenced local variable
+AT24C02.C(15): warning C280: 'WordAddress': unreferenced local variable
+linking...
+Program Size: data=40.0 xdata=0 code=842
+creating hex file from "Project"...
+"Project" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling AT24C02.c...
+AT24C02.C(6): warning C280: 'WordAddress': unreferenced local variable
+AT24C02.C(15): warning C280: 'WordAddress': unreferenced local variable
+linking...
+Program Size: data=40.0 xdata=0 code=842
+creating hex file from "Project"...
+"Project" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling Delayc...
+compiling LCD1602.c...
+compiling Key...
+compiling 12C.c...
+compiling AT24C02.c...
+AT24C02.C(6): warning C280: 'WordAddress': unreferenced local variable
+AT24C02.C(15): warning C280: 'WordAddress': unreferenced local variable
+linking...
+Program Size: data=40.0 xdata=0 code=842
+creating hex file from "Project"...
+"Project" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling AT24C02.c...
+AT24C02.C(6): warning C280: 'WordAddress': unreferenced local variable
+AT24C02.C(19): warning C280: 'WordAddress': unreferenced local variable
+linking...
+Program Size: data=40.0 xdata=0 code=855
+creating hex file from "Project"...
+"Project" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling AT24C02.c...
+linking...
+Program Size: data=41.0 xdata=0 code=901
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=37.0 xdata=0 code=931
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=37.0 xdata=0 code=931
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=42.0 xdata=0 code=910
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=40.0 xdata=0 code=915
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling AT24C02.c...
+linking...
+Program Size: data=37.0 xdata=0 code=931
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling AT24C02.c...
+linking...
+Program Size: data=38.0 xdata=0 code=1136
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=38.0 xdata=0 code=1131
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).

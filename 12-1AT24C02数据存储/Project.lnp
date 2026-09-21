@@ -1,0 +1,9 @@
+"main.obj",
+"Delayc.obj",
+"LCD1602.obj",
+"Key.obj",
+"12C.obj",
+"AT24C02.obj" 
+TO "Project" 
+RAMSIZE(256) 
+DISABLEWARNING (16) 
