@@ -1,0 +1,231 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\AllLab\keil_project\13-1DS18B20ÎÂ¶È¶ÁÈ¡\Project.uvproj
+Project File Date:  09/22/2026
+
+<h2>Output:</h2>
+Build target 'Target 1'
+Target has no object modules
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=17
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling Delayc...
+compiling LCD1602.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?DELAYC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_SHOWCHAR?LCD1602
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_SHOWNUM?LCD1602
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_SHOWSIGNEDNUM?LCD1602
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_SHOWHEXNUM?LCD1602
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_SHOWBINNUM?LCD1602
+Program Size: data=38.0 xdata=0 code=608
+creating hex file from "Project"...
+"Project" - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=38.0 xdata=0 code=608
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=38.0 xdata=0 code=608
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling DS18B20.c...
+compiling OneWire.c...
+ONEWIRE.C(3): error C141: syntax error near 'P3', expected '='
+ONEWIRE.C(9): error C202: 'OneWire_DQ': undefined identifier
+ONEWIRE.C(10): error C202: 'OneWire_DQ': undefined identifier
+ONEWIRE.C(13): error C202: 'OneWire_DQ': undefined identifier
+ONEWIRE.C(16): error C202: 'OneWire_DQ': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling OneWire.c...
+ONEWIRE.C(3): error C141: syntax error near 'P3', expected '='
+ONEWIRE.C(9): error C202: 'OneWire_DQ': undefined identifier
+ONEWIRE.C(10): error C202: 'OneWire_DQ': undefined identifier
+ONEWIRE.C(13): error C202: 'OneWire_DQ': undefined identifier
+ONEWIRE.C(16): error C202: 'OneWire_DQ': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling OneWire.c...
+linking...
+Program Size: data=36.0 xdata=0 code=653
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling OneWire.c...
+ONEWIRE.C(51): warning C206: 'OneWire_SendByte': missing function-prototype
+ONEWIRE.C(51): error C267: 'OneWire_SendByte': requires ANSI-style prototype
+ONEWIRE.C(53): error C237: '_OneWire_SendBit': function already has a body
+ONEWIRE.C(56): error C231: '_OneWire_SendBit': redefinition
+ONEWIRE.C(62): error C141: syntax error near '}'
+ONEWIRE.C(65): error C141: syntax error near '}', expected ';'
+ONEWIRE.C(65): error C231: '_OneWire_SendBit': redefinition
+Target not created
+Build target 'Target 1'
+compiling main.c...
+ONEWIRE.H(8): error C231: '_OneWire_SendByte': redefinition
+compiling OneWire.c...
+ONEWIRE.C(56): error C231: '_OneWire_SendByte': redefinition
+ONEWIRE.C(62): error C141: syntax error near '}'
+ONEWIRE.C(65): error C141: syntax error near '}', expected ';'
+ONEWIRE.C(65): error C231: '_OneWire_SendByte': redefinition
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(5): error C132: 'AckBit': not in formal parameter list
+MAIN.C(8): error C132: 'main': not in formal parameter list
+MAIN.C(8): error C141: syntax error near '{'
+MAIN.C(9): error C132: 'LCD_Init': not in formal parameter list
+MAIN.C(10): error C141: syntax error near '1'
+MAIN.C(10): error C132: 'LCD_ShowString': not in formal parameter list
+MAIN.C(11): error C244: 'AckBit': can't initialize, bad type or class
+MAIN.C(11): error C132: 'AckBit': not in formal parameter list
+MAIN.C(12): error C141: syntax error near '2'
+MAIN.C(12): error C132: 'LCD_ShowNum': not in formal parameter list
+MAIN.C(13): error C141: syntax error near 'while'
+MAIN.C(13): error C141: syntax error near '1'
+compiling OneWire.c...
+ONEWIRE.C(62): error C141: syntax error near '}'
+ONEWIRE.C(65): error C141: syntax error near '}', expected ';'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(5): error C132: 'AckBit': not in formal parameter list
+MAIN.C(8): error C132: 'main': not in formal parameter list
+MAIN.C(8): error C141: syntax error near '{'
+MAIN.C(9): error C132: 'LCD_Init': not in formal parameter list
+MAIN.C(10): error C141: syntax error near '1'
+MAIN.C(10): error C132: 'LCD_ShowString': not in formal parameter list
+MAIN.C(11): error C244: 'AckBit': can't initialize, bad type or class
+MAIN.C(11): error C132: 'AckBit': not in formal parameter list
+MAIN.C(12): error C141: syntax error near '2'
+MAIN.C(12): error C132: 'LCD_ShowNum': not in formal parameter list
+MAIN.C(13): error C141: syntax error near 'while'
+MAIN.C(13): error C141: syntax error near '1'
+compiling OneWire.c...
+ONEWIRE.C(62): error C141: syntax error near '}'
+ONEWIRE.C(65): error C141: syntax error near '}', expected ';'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(5): error C132: 'AckBit': not in formal parameter list
+MAIN.C(8): error C132: 'main': not in formal parameter list
+MAIN.C(8): error C141: syntax error near '{'
+MAIN.C(9): error C132: 'LCD_Init': not in formal parameter list
+MAIN.C(10): error C141: syntax error near '1'
+MAIN.C(10): error C132: 'LCD_ShowString': not in formal parameter list
+MAIN.C(11): error C244: 'AckBit': can't initialize, bad type or class
+MAIN.C(11): error C132: 'AckBit': not in formal parameter list
+MAIN.C(12): error C141: syntax error near '2'
+MAIN.C(12): error C132: 'LCD_ShowNum': not in formal parameter list
+MAIN.C(13): error C141: syntax error near 'while'
+MAIN.C(13): error C141: syntax error near '1'
+compiling OneWire.c...
+ONEWIRE.C(65): error C141: syntax error near '}', expected ';'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(5): error C132: 'AckBit': not in formal parameter list
+MAIN.C(8): error C132: 'main': not in formal parameter list
+MAIN.C(8): error C141: syntax error near '{'
+MAIN.C(9): error C132: 'LCD_Init': not in formal parameter list
+MAIN.C(10): error C141: syntax error near '1'
+MAIN.C(10): error C132: 'LCD_ShowString': not in formal parameter list
+MAIN.C(11): error C244: 'AckBit': can't initialize, bad type or class
+MAIN.C(11): error C132: 'AckBit': not in formal parameter list
+MAIN.C(12): error C141: syntax error near '2'
+MAIN.C(12): error C132: 'LCD_ShowNum': not in formal parameter list
+MAIN.C(13): error C141: syntax error near 'while'
+MAIN.C(13): error C141: syntax error near '1'
+compiling OneWire.c...
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(5): error C132: 'AckBit': not in formal parameter list
+MAIN.C(8): error C132: 'main': not in formal parameter list
+MAIN.C(8): error C141: syntax error near '{'
+MAIN.C(9): error C132: 'LCD_Init': not in formal parameter list
+MAIN.C(10): error C141: syntax error near '1'
+MAIN.C(10): error C132: 'LCD_ShowString': not in formal parameter list
+MAIN.C(11): error C244: 'AckBit': can't initialize, bad type or class
+MAIN.C(11): error C132: 'AckBit': not in formal parameter list
+MAIN.C(12): error C141: syntax error near '2'
+MAIN.C(12): error C132: 'LCD_ShowNum': not in formal parameter list
+MAIN.C(13): error C141: syntax error near 'while'
+MAIN.C(13): error C141: syntax error near '1'
+compiling DS18B20.c...
+DS18B20.C(9): error C132: 'DS18B20_Convert': not in formal parameter list
+DS18B20.C(9): error C141: syntax error near '{'
+DS18B20.C(10): error C132: 'OneWire_Init': not in formal parameter list
+DS18B20.C(11): error C141: syntax error near '0xCC'
+DS18B20.C(11): error C132: 'OneWire_SendByte': not in formal parameter list
+DS18B20.C(12): error C141: syntax error near '0x44'
+DS18B20.C(12): error C132: 'OneWire_SendByte': not in formal parameter list
+DS18B20.C(13): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling DS18B20.c...
+DS18B20.C(9): error C132: 'DS18B20_Convert': not in formal parameter list
+DS18B20.C(9): error C141: syntax error near '{'
+DS18B20.C(10): error C132: 'OneWire_Init': not in formal parameter list
+DS18B20.C(11): error C141: syntax error near '0xCC'
+DS18B20.C(11): error C132: 'OneWire_SendByte': not in formal parameter list
+DS18B20.C(12): error C141: syntax error near '0x44'
+DS18B20.C(12): error C132: 'OneWire_SendByte': not in formal parameter list
+DS18B20.C(13): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling DS18B20.c...
+linking...
+Program Size: data=39.0 xdata=0 code=1894
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling DS18B20.c...
+linking...
+Program Size: data=36.0 xdata=0 code=1926
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(10): warning C206: 'Delay': missing function-prototype
+MAIN.C(10): error C267: 'Delay': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=36.0 xdata=0 code=1936
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling DS18B20.c...
+linking...
+Program Size: data=39.0 xdata=0 code=1904
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=39.0 xdata=0 code=1904
+creating hex file from "Project"...
+"Project" - 0 Error(s), 0 Warning(s).

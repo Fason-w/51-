@@ -1,0 +1,8 @@
+"main.obj",
+"Delayc.obj",
+"LCD1602.obj",
+"DS18B20.obj",
+"OneWire.obj" 
+TO "Project" 
+RAMSIZE(256) 
+DISABLEWARNING (16) 
