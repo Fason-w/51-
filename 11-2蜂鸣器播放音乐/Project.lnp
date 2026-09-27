@@ -1,0 +1,5 @@
+"Delayc.obj",
+"Timer0.obj",
+"main.obj" 
+TO "Project" 
+RAMSIZE(256) 

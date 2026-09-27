@@ -1,0 +1,116 @@
+C51 COMPILER V9.01   MAIN                                                                  09/23/2026 20:57:59 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\MCU\keil5\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "DS18B20.h"
+   3          #include "LCD1602.h"
+   4          #include "Key.h"
+   5          #include "AT24C02.h"
+   6          #include "Delay.h"
+   7          
+   8          float T,TShow;
+   9          unsigned char KeyNum;
+  10          int  TLow=0,THigh=0;
+  11          
+  12          void main()
+  13          {
+  14   1              LCD_Init();
+  15   1              LCD_ShowString(1,1,"T:");
+  16   1              LCD_ShowString(2,1,"TL:");
+  17   1              LCD_ShowString(2,9,"TH:");
+  18   1              DS18B20_Convert();
+  19   1              TLow=AT24C02_ReadByte(0);
+  20   1              THigh=AT24C02_ReadByte(1);
+  21   1              if(TLow<-55||THigh>125||TLow>=THigh)
+  22   1              {
+  23   2                      TLow=20;
+  24   2                      THigh=25;
+  25   2              }
+  26   1              Delay(600);
+  27   1              LCD_ShowSignedNum(2,4,TLow,3);
+  28   1              LCD_ShowSignedNum(2,12,THigh,3);
+  29   1      
+  30   1              while(1)
+  31   1              {
+  32   2                      KeyNum=Key();
+  33   2                      DS18B20_Convert();
+  34   2                      T=DS18B20_ReadT();
+  35   2                      if(T<0)
+  36   2                      {
+  37   3                              LCD_ShowChar(1,3,'-');
+  38   3                              TShow=-T;
+  39   3                      }
+  40   2                      else
+  41   2                      {
+  42   3                              LCD_ShowChar(1,3,'+');
+  43   3                              TShow=T;
+  44   3                      }
+  45   2                      LCD_ShowNum(1,4,TShow,3);
+  46   2                      LCD_ShowChar(1,7,'.');
+  47   2                      LCD_ShowNum(1,8,(unsigned long)(TShow*100)%100,2);
+  48   2                      if(KeyNum)
+  49   2                      {
+  50   3                              if(KeyNum==1)
+  51   3                              {        
+  52   4                                      TLow--;
+  53   4                                      if(TLow<-55)TLow++;
+  54   4                              }
+  55   3                              if(KeyNum==2)
+C51 COMPILER V9.01   MAIN                                                                  09/23/2026 20:57:59 PAGE 2   
+
+  56   3                              {
+  57   4                                      TLow++;
+  58   4                                      if(TLow>THigh)TLow--;
+  59   4      
+  60   4                              }
+  61   3                              if(KeyNum==3)
+  62   3                              {                                       
+  63   4                                      THigh--;
+  64   4                                      if(THigh<TLow)THigh++;
+  65   4                              }
+  66   3                              if(KeyNum==4)
+  67   3                              {                               
+  68   4                                      THigh++;
+  69   4                                      if(THigh>125)THigh--;
+  70   4                              }
+  71   3                              LCD_ShowSignedNum(2,4,TLow,3);
+  72   3                              LCD_ShowSignedNum(2,12,THigh,3);
+  73   3                              AT24C02_WriteByte(0,TLow);
+  74   3                              Delay(5);
+  75   3                              AT24C02_WriteByte(1,THigh);
+  76   3                              Delay(5);
+  77   3                      }
+  78   2                      if(T>THigh)
+  79   2                      {
+  80   3                              LCD_ShowString(1,13,"OV:H");
+  81   3                      }
+  82   2                      else if(T<TLow)
+  83   2                      {
+  84   3                              LCD_ShowString(1,13,"OV:L");
+  85   3                      }
+  86   2                      else
+  87   2                      {
+  88   3                              LCD_ShowString(1,13,"    ");
+  89   3                      }
+  90   2              }
+  91   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    606    ----
+   CONSTANT SIZE    =     26    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     13    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

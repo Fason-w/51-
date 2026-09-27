@@ -1,0 +1,10 @@
+"Delayc.obj",
+"Nixie.obj",
+"Timer0.obj",
+"Key.obj",
+"mian.obj",
+"12C.obj",
+"AT24C02.obj" 
+TO "Project" 
+RAMSIZE(256) 
+DISABLEWARNING (16) 
