@@ -1,0 +1,7 @@
+"main.obj",
+"Delayc.obj",
+"Key.obj",
+"Timer0.obj",
+"Nixie.obj" 
+TO "Project" 
+RAMSIZE(256) 
