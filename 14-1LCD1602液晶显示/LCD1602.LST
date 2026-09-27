@@ -1,0 +1,171 @@
+C51 COMPILER V9.01   LCD1602                                                               09/27/2026 15:08:50 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE LCD1602
+OBJECT MODULE PLACED IN LCD1602.OBJ
+COMPILER INVOKED BY: D:\MCU\keil5\C51\BIN\C51.EXE LCD1602.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          
+   3          sbit LCD_EN=P2^7;
+   4          sbit LCD_RS=P2^6;
+   5          sbit LCD_RW=P2^5;
+   6          #define LCD_DataPort P0
+   7          
+   8          void LCD_Delay()                //@12.000MHz  1ms
+   9          {
+  10   1              unsigned char i, j;
+  11   1      
+  12   1              i = 2;
+  13   1              j = 239;
+  14   1              do
+  15   1              {
+  16   2                      while (--j);
+  17   2              } while (--i);
+  18   1      }
+  19          
+  20          void LCD_WriteCommand(unsigned char Command)
+  21          {
+  22   1              LCD_RS=0;
+  23   1              LCD_RW=0;
+  24   1              LCD_DataPort=Command;
+  25   1              LCD_EN=1;
+  26   1              LCD_Delay();
+  27   1              LCD_EN=0;       
+  28   1              LCD_Delay();    
+  29   1      }
+  30          
+  31          void LCD_WriteData(unsigned char Data)
+  32          {
+  33   1              LCD_RS=1;
+  34   1              LCD_RW=0;
+  35   1              LCD_DataPort=Data;
+  36   1              LCD_EN=1;
+  37   1              LCD_Delay();
+  38   1              LCD_EN=0;       
+  39   1              LCD_Delay();    
+  40   1              
+  41   1      }
+  42          
+  43          void LCD_Init()
+  44          {
+  45   1              LCD_WriteCommand(0x38);
+  46   1              LCD_WriteCommand(0x0C);
+  47   1              LCD_WriteCommand(0x06);
+  48   1              LCD_WriteCommand(0x01);
+  49   1      }
+  50          
+  51          void LCD_SetCursor(unsigned char Line,unsigned char Column)
+  52          {
+  53   1              if(Line==1)
+  54   1              {
+  55   2                      LCD_WriteCommand(0x80|(Column-1));
+C51 COMPILER V9.01   LCD1602                                                               09/27/2026 15:08:50 PAGE 2   
+
+  56   2              }
+  57   1              else
+  58   1              {
+  59   2                      LCD_WriteCommand(0x80|(Column-1)+0x40);
+  60   2              }
+  61   1      }
+  62          
+  63          void LCD_ShowChar(unsigned char Line,unsigned char Column,unsigned char Char)
+  64          {
+  65   1              LCD_SetCursor(Line,Column);
+  66   1              LCD_WriteData(Char);
+  67   1      }
+  68          
+  69          void LCD_ShowString(unsigned char Line,unsigned char Column,unsigned char *String)
+  70          {
+  71   1              unsigned char i;
+  72   1              LCD_SetCursor(Line,Column);
+  73   1              for(i=0; String[i]!='\0'; i++)
+  74   1              {
+  75   2                      LCD_WriteData(String[i]);
+  76   2              }
+  77   1      }
+  78          
+  79          int LCD_Pow(int X, int Y)
+  80          {
+  81   1              unsigned char i;
+  82   1              int result=1;
+  83   1              for(i=0; i<Y; i++)
+  84   1              {
+  85   2                      result*=X;
+  86   2              }
+  87   1              return result;
+  88   1      }
+  89          void LCD_ShowNum(unsigned char Line,unsigned char Column,unsigned int Num,unsigned char Length)
+  90          {
+  91   1              unsigned char i;
+  92   1              LCD_SetCursor(Line,Column);
+  93   1              for(i=Length; i>0; i--)
+  94   1              {
+  95   2                      LCD_WriteData('0'+Num/LCD_Pow(10,i-1)%10);      
+  96   2              }
+  97   1      }
+  98          
+  99          void LCD_ShowSignedNum(unsigned char Line,unsigned char Column,int Num,unsigned char Length)
+ 100          {
+ 101   1              unsigned char i;
+ 102   1              unsigned int Number;
+ 103   1              LCD_SetCursor(Line,Column);
+ 104   1              if(Num>=0)
+ 105   1              {
+ 106   2                       LCD_WriteData('+');
+ 107   2                       Number=Num;
+ 108   2              }
+ 109   1              else
+ 110   1              {
+ 111   2                       LCD_WriteData('-');
+ 112   2                       Number=-Num;
+ 113   2              }
+ 114   1              for(i=Length; i>0; i--)
+ 115   1              {
+ 116   2                      LCD_WriteData('0'+Number/LCD_Pow(10,i-1)%10);   
+ 117   2              }
+C51 COMPILER V9.01   LCD1602                                                               09/27/2026 15:08:50 PAGE 3   
+
+ 118   1      }
+ 119          
+ 120          void LCD_ShowHexNum(unsigned char Line,unsigned char Column,unsigned int Num,unsigned char Length)
+ 121          {
+ 122   1              unsigned char i;
+ 123   1              unsigned char SingleNum;
+ 124   1              LCD_SetCursor(Line,Column);
+ 125   1              for(i=Length; i>0; i--)
+ 126   1              {
+ 127   2                      SingleNum=Num/LCD_Pow(16,i-1)%16;
+ 128   2                      if(SingleNum<10)
+ 129   2                              LCD_WriteData('0'+SingleNum);
+ 130   2                      else
+ 131   2                              LCD_WriteData('A'+SingleNum-10);
+ 132   2                              
+ 133   2              }
+ 134   1      }
+ 135          
+ 136          void LCD_ShowBinNum(unsigned char Line,unsigned char Column,unsigned int Num,unsigned char Length)
+ 137          {
+ 138   1              unsigned char i;
+ 139   1              LCD_SetCursor(Line,Column);
+ 140   1              for(i=Length; i>0; i--)
+ 141   1              {
+ 142   2                      LCD_WriteData('0'+Num/LCD_Pow(2,i-1)%2);        
+ 143   2              }
+ 144   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    387    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      29
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
